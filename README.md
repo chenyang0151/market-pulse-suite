@@ -43,7 +43,18 @@ Dependencies: Python 3.10+, `uv`/`pip`, and optional OpenClaw CLI if you plan to
 | Creator Consensus | `samples/creator_consensus_sample.md` （自动化脚本输出） |
 | $100K Rebalance note | `samples/rebalance-note.txt` （messaging-ready 交易建议） |
 
-将任意一次运行的成品文件复制到 `daily-updates/reports/` 与 `daily-updates/positions/`，即可形成「demo」历史库。
+把任意一次运行的成品复制到 `daily-updates/reports/` 与 `daily-updates/positions/`，就能形成「demo + 历史归档」；也可以使用下面的自动脚本。
+
+## Auto-archive helper / 自动归档工具
+
+```bash
+# 从 repo 根目录
+python3 tools/archive_daily.py --date 2026-03-04
+```
+
+- 默认会从 `../data/market-pulse/reports/` 里寻找 `YYYY-MM-DD.md` 或 `market-pulse-YYYY-MM-DD.md` 并拷贝到 `daily-updates/reports/`。
+- 同时复制 `../data/market-pulse/portfolio.json` 到 `daily-updates/positions/`（可用 `--skip-portfolio` 关闭）。
+- 可结合 cron / GitHub Action，在本地跑完 `daily.sh` 后自动归档并 push。
 
 ## Branding assets / 品牌素材
 
