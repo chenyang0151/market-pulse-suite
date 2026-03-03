@@ -42,8 +42,9 @@ Dependencies: Python 3.10+, `uv`/`pip`, and optional OpenClaw CLI if you plan to
 | Market Pulse brief | `samples/market-pulse-report-2026-03-03.md` （真实双语报告，可直接复制到 Telegram） |
 | Creator Consensus | `samples/creator_consensus_sample.md` （自动化脚本输出） |
 | $100K Rebalance note | `samples/rebalance-note.txt` （messaging-ready 交易建议） |
+| Trade Plan (板块→结论→操作) | `daily-updates/trade-plans/2026-03-03-trade-plan.md` |
 
-把任意一次运行的成品复制到 `daily-updates/reports/` 与 `daily-updates/positions/`，就能形成「demo + 历史归档」；也可以使用下面的自动脚本。
+把任意一次运行的成品复制到 `daily-updates/reports/`、`daily-updates/positions/`、`daily-updates/trade-plans/`，就能形成「demo + 历史归档」；也可以使用下面的自动脚本。
 
 ## Auto-archive helper / 自动归档工具
 
