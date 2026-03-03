@@ -1,27 +1,28 @@
 # Trade Plan — 2026-03-02
 
 ## 板块：Energy & Defense Hedge
-- **结论**：中东紧张局势推升原油与国防订单，能源与军工仍是组合的防御核心。
+- **结论**：中东局势维持风险溢价，能源 + 军工仍是组合防御支点。
 - **Actions**
-  1. **CVX** — 建仓 15%（买入区间 $188-192）；若油价回调仍保持分批买入。
-  2. **LMT** — 建仓 15%（买入区间 $660-670）；若国防部补单节奏放缓则减至 10%。
+  1. **CVX** — 目标 15% ，现价 $190.14；Energy hedge vs. Middle East risk; dividend + buyback support
+  2. **LMT** — 目标 15% ，现价 $663.85；Front-line beneficiary if Iran conflict escalates; order backlog strong
 
 ## 板块：AI Infrastructure Stack
-- **结论**：GTC 前夕，AI 基础设施订单继续上修，超大规模云厂商加倍资本开支。
+- **结论**：GTC 前后，AI 基础设施订单与云 capex 同步上修，核心仓位保持。
 - **Actions**
-  1. **NVDA** — 目标权重 12%，买入价 $178-185，若数据中心订单继续加速可加仓至 15%。
-  2. **MSFT** — 目标 10%，买入价 $400-408，用于吸收 AI 平台 beta。
-  3. **GOOGL** — 目标 8%，买入价 $298-305，受益广告复苏与 Gemini 推进。
+  1. **NVDA** — 目标 12% ，如突破 $180.11+ 以期权保护；AI infrastructure spine; still compounding data-center demand
+  2. **MSFT** — 目标 10% ，逢 $404.50 下方补齐；Cloud + AI suite cash machine; stabilizes tech exposure
+  3. **GOOGL** — 目标 8% ，维持基本面确认前的等待；AI + advertising duopoly; benefits from agency pullback on X
 
-## 板块：Consumer Resilience / Defensive Growth
-- **结论**：会员制零售与高股息 ETF 仍是抗波动底仓。
+## 板块：Consumer Resilience / Income Barbell
+- **结论**：会员制零售 + 高股息 ETF 对冲利率反复，有序分批。
 - **Actions**
-  1. **COST** — 目标 8%，买入价 $995-1,010，若CPI再起仍维持仓位。
-  2. **SCHD** — 目标 7%，买入价 $31-32，分散收益来源。
+  1. **COST** — 目标 8% ，现价 $1009.03；Membership model defends margins if inflation resurges
+  2. **SCHD** — 目标 7% ，现价 $31.64；High quality dividend ETF to ballast drawdowns
 
 ## 板块：High Beta / Optionality
-- **结论**：保留少量高弹性票捕捉情绪反转，配合尾部对冲。
+- **结论**：保留少量高弹性/主题票，配合 VIX 尾部对冲。
 - **Actions**
-  1. **TSLA** — 目标 4%，买入价 $385-400，设置严格止损。
-  2. **SOUN** — 目标 4%，买入价 $8-9，跟踪语音 AI 主题热度。
-  3. **VIX 30d Call** — Notional $2k，充当地缘冲击对冲。
+  1. **TSLA** — 目标 4% ，现价 $393.25；High-beta innovation proxy; keep tight stops
+  2. **SOUN** — 目标 4% ，现价 $8.52；AI speech beta play (per Meyka/YouTube chatter); capped risk
+  - **Hedges**
+    - VIX 30d Call: 名义 $2,000，对冲地缘尾部风险。

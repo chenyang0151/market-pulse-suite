@@ -16,6 +16,7 @@ Rules-based positioning overlay that mirrors the insights from Market Pulse + Cr
 
 1. Update `data/portfolio.json` after the daily brief (manual edit or script).
 2. Run `scripts/rebalance.py` to generate a messenger-ready summary.
+3. Optional: `python3 ../../tools/generate_trade_plan.py --date YYYY-MM-DD` to turn the holdings into「板块→结论→操作」格式。（依赖 `data/trade_playbook.json`）
 
 ```bash
 cd packages/sim-portfolio-100k

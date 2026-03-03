@@ -46,16 +46,40 @@ Dependencies: Python 3.10+, `uv`/`pip`, and optional OpenClaw CLI if you plan to
 
 把任意一次运行的成品复制到 `daily-updates/reports/`、`daily-updates/positions/`、`daily-updates/trade-plans/`，就能形成「demo + 历史归档」；也可以使用下面的自动脚本。
 
-## Auto-archive helper / 自动归档工具
+## Automation toolkit / 自动化工具集
+
+### 1. Trade plan generator
 
 ```bash
-# 从 repo 根目录
-python3 tools/archive_daily.py --date 2026-03-04
+python3 tools/generate_trade_plan.py --date 2026-03-04 \
+  --portfolio packages/sim-portfolio-100k/data/portfolio.json
 ```
 
-- 默认会从 `../data/market-pulse/reports/` 里寻找 `YYYY-MM-DD.md` 或 `market-pulse-YYYY-MM-DD.md` 并拷贝到 `daily-updates/reports/`。
-- 同时复制 `../data/market-pulse/portfolio.json` 到 `daily-updates/positions/`（可用 `--skip-portfolio` 关闭）。
-- 可结合 cron / GitHub Action，在本地跑完 `daily.sh` 后自动归档并 push。
+- 读取 `packages/sim-portfolio-100k/data/trade_playbook.json` + 当前组合，输出 `daily-updates/trade-plans/<date>-trade-plan.md`。
+- 可以在跑完 `daily.sh` 和 `rebalance.py` 后立即执行。
+
+### 2. Auto-archive helper
+
+```bash
+python3 tools/archive_daily.py --date 2026-03-04 \
+  --reports-dir ../data/market-pulse/reports \
+  --portfolio-json ../data/market-pulse/portfolio.json \
+  --trade-plan daily-updates/trade-plans/2026-03-04-trade-plan.md
+```
+
+- 寻找 `YYYY-MM-DD.md` 或 `market-pulse-YYYY-MM-DD.md`，复制到 `daily-updates/reports/`。
+- 同时复制 portfolio（如需跳过可加 `--skip-portfolio`）与 trade plan（可选 `--trade-plan`）。
+
+### 3. GitHub Release workflow
+
+`/.github/workflows/daily-release.yml` 提供 `workflow_dispatch` 入口：
+
+```
+gh workflow run daily-release.yml -f date=2026-03-04
+```
+
+- 会校验 `daily-updates/` 下是否存在当日的 report / trade-plan / portfolio。
+- 自动创建 `daily-<date>` tag + Release，并附上三个原始文件，方便对外分发 / SEO。
 
 ## Branding assets / 品牌素材
 

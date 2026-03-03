@@ -1,27 +1,28 @@
 # Trade Plan — 2026-03-03
 
 ## 板块：Energy & Defense Hedge
-- **结论**：以色列突袭黎巴嫩后，布油维持风险溢价；维持能源+防务双支点。
+- **结论**：中东局势维持风险溢价，能源 + 军工仍是组合防御支点。
 - **Actions**
-  1. **CVX** — 目标 15%，现价 $190；若油价回落至 $186 附近允许再加 0.5% 权重。
-  2. **LMT** — 目标 15%，现价 $664；若国防补单确认，触发加仓至 17%。
+  1. **CVX** — 目标 15% ，现价 $190.14；Energy hedge vs. Middle East risk; dividend + buyback support
+  2. **LMT** — 目标 15% ，现价 $663.85；Front-line beneficiary if Iran conflict escalates; order backlog strong
 
 ## 板块：AI Infrastructure Stack
-- **结论**：GTC 倒计时，Upstream 供应链（SMCI）和云厂商指引继续上调。
+- **结论**：GTC 前后，AI 基础设施订单与云 capex 同步上修，核心仓位保持。
 - **Actions**
-  1. **NVDA** — 目标 12%，持有；若股价冲破 $190 则考虑用 call spread 保护。
-  2. **MSFT** — 目标 10%，逢 $400 下方补齐 0.5% 漏口。
-  3. **GOOGL** — 目标 8%，保持原仓，等待广告/AI 数据更新。
+  1. **NVDA** — 目标 12% ，如突破 $180.11+ 以期权保护；AI infrastructure spine; still compounding data-center demand
+  2. **MSFT** — 目标 10% ，逢 $404.50 下方补齐；Cloud + AI suite cash machine; stabilizes tech exposure
+  3. **GOOGL** — 目标 8% ，维持基本面确认前的等待；AI + advertising duopoly; benefits from agency pullback on X
 
 ## 板块：Consumer Resilience / Income Barbell
-- **结论**：抵御利率反复的双轮：Costco + 高股息 ETF。
+- **结论**：会员制零售 + 高股息 ETF 对冲利率反复，有序分批。
 - **Actions**
-  1. **COST** — 目标 8%，若高于 $1,020 则不追，等待 $1,000 再补。
-  2. **SCHD** — 目标 7%，若收益率跌破 3.5% 则考虑减仓 1%。
+  1. **COST** — 目标 8% ，现价 $1009.03；Membership model defends margins if inflation resurges
+  2. **SCHD** — 目标 7% ，现价 $31.64；High quality dividend ETF to ballast drawdowns
 
 ## 板块：High Beta / Optionality
-- **结论**：语音 AI 与 EV Beta 维持少量筹码，匹配 VIX Call hedge。
+- **结论**：保留少量高弹性/主题票，配合 VIX 尾部对冲。
 - **Actions**
-  1. **TSLA** — 目标 4%，价格 $393；若 FSD 进展不及预期则减至 2%。
-  2. **SOUN** — 目标 4%，持有；若突破 $9.5 以上可分批了结盈利。
-  3. **VIX 30d Call** — 保持 $2k 名义，若 VIX > 25 可获利了结一半。
+  1. **TSLA** — 目标 4% ，现价 $393.25；High-beta innovation proxy; keep tight stops
+  2. **SOUN** — 目标 4% ，现价 $8.52；AI speech beta play (per Meyka/YouTube chatter); capped risk
+  - **Hedges**
+    - VIX 30d Call: 名义 $2,000，对冲地缘尾部风险。

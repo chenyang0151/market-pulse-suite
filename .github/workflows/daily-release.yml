@@ -1,0 +1,46 @@
+name: Daily bundle release
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "ISO date, e.g. 2026-03-03"
+        required: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Collect files
+        run: |
+          DATE=${{ inputs.date }}
+          REPORT="daily-updates/reports/${DATE}-market-pulse.md"
+          PLAN="daily-updates/trade-plans/${DATE}-trade-plan.md"
+          PORT="daily-updates/positions/${DATE}-portfolio.json"
+          for FILE in "$REPORT" "$PLAN" "$PORT"; do
+            if [ ! -f "$FILE" ]; then
+              echo "Missing file: $FILE" >&2
+              exit 1
+            fi
+          done
+          mkdir -p dist
+          cp "$REPORT" dist/
+          cp "$PLAN" dist/
+          cp "$PORT" dist/
+          cat <<EOF > dist/release-body.md
+          Daily bundle for $DATE\n\n- Market Pulse brief\n- Trade plan\n- $100K portfolio snapshot\n\nGenerated via Market Pulse Suite automation. See README for runbooks.
+          EOF
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: daily-${{ inputs.date }}
+          name: Daily bundle ${{ inputs.date }}
+          body_path: dist/release-body.md
+          files: |
+            dist/${{ inputs.date }}-market-pulse.md
+            dist/${{ inputs.date }}-trade-plan.md
+            dist/${{ inputs.date }}-portfolio.json

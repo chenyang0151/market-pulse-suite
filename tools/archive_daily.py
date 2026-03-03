@@ -32,6 +32,7 @@ def main() -> int:
     parser.add_argument("--date", default=dt.date.today().isoformat(), help="ISO date (default: today)")
     parser.add_argument("--reports-dir", default="../data/market-pulse/reports", help="Source reports directory")
     parser.add_argument("--portfolio-json", default="../data/market-pulse/portfolio.json", help="Source portfolio snapshot")
+    parser.add_argument("--trade-plan", help="Path to trade-plan markdown (optional)")
     parser.add_argument("--updates-dir", default="daily-updates", help="Target base directory")
     parser.add_argument("--skip-portfolio", action="store_true", help="Only archive the report")
     args = parser.parse_args()
@@ -60,6 +61,18 @@ def main() -> int:
             "portfolio",
         )
         print(f"Copied portfolio → {portfolio_dest}")
+
+    if args.trade_plan:
+        trade_path = Path(args.trade_plan).expanduser().resolve()
+        if not trade_path.exists():
+            raise SystemExit(f"Trade plan missing: {trade_path}")
+        trade_dest = copy_with_naming(
+            trade_path,
+            updates_dir / "trade-plans",
+            f"{target_date:%Y-%m-%d}",
+            "trade-plan",
+        )
+        print(f"Copied trade plan → {trade_dest}")
 
     return 0
 

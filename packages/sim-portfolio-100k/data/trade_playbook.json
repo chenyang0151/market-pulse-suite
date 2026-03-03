@@ -1,0 +1,40 @@
+{
+  "modules": [
+    {
+      "name": "Energy & Defense Hedge",
+      "conclusion": "中东局势维持风险溢价，能源 + 军工仍是组合防御支点。",
+      "tickers": [
+        {"symbol": "CVX", "template": "目标 {target_pct:.0f}% ，现价 ${price:.2f}；{thesis}"},
+        {"symbol": "LMT", "template": "目标 {target_pct:.0f}% ，现价 ${price:.2f}；{thesis}"}
+      ]
+    },
+    {
+      "name": "AI Infrastructure Stack",
+      "conclusion": "GTC 前后，AI 基础设施订单与云 capex 同步上修，核心仓位保持。",
+      "tickers": [
+        {"symbol": "NVDA", "template": "目标 {target_pct:.0f}% ，如突破 ${price:.2f}+ 以期权保护；{thesis}"},
+        {"symbol": "MSFT", "template": "目标 {target_pct:.0f}% ，逢 ${price:.2f} 下方补齐；{thesis}"},
+        {"symbol": "GOOGL", "template": "目标 {target_pct:.0f}% ，维持基本面确认前的等待；{thesis}"}
+      ]
+    },
+    {
+      "name": "Consumer Resilience / Income Barbell",
+      "conclusion": "会员制零售 + 高股息 ETF 对冲利率反复，有序分批。",
+      "tickers": [
+        {"symbol": "COST", "template": "目标 {target_pct:.0f}% ，现价 ${price:.2f}；{thesis}"},
+        {"symbol": "SCHD", "template": "目标 {target_pct:.0f}% ，现价 ${price:.2f}；{thesis}"}
+      ]
+    },
+    {
+      "name": "High Beta / Optionality",
+      "conclusion": "保留少量高弹性/主题票，配合 VIX 尾部对冲。",
+      "tickers": [
+        {"symbol": "TSLA", "template": "目标 {target_pct:.0f}% ，现价 ${price:.2f}；{thesis}"},
+        {"symbol": "SOUN", "template": "目标 {target_pct:.0f}% ，现价 ${price:.2f}；{thesis}"}
+      ],
+      "hedges": [
+        {"name": "VIX 30d Call", "detail": "名义 $2,000，对冲地缘尾部风险。"}
+      ]
+    }
+  ]
+}
