@@ -1,0 +1,42 @@
+{
+  "as_of": "2026-03-03T15:00:00Z",
+  "topics": [
+    {
+      "theme": "AI Infrastructure",
+      "buzz_score": 0.87,
+      "tickers": ["NVDA", "MSFT", "SMCI"],
+      "creators": [
+        {"name": "Bloomberg Television", "clip": "GTC preview: hyperscalers double AI capex", "sentiment": "bullish"},
+        {"name": "CNBC Fast Money", "clip": "Supply chain update from Supermicro", "sentiment": "bullish"},
+        {"name": "美投讲美股", "clip": "NVDA数据中心加单", "sentiment": "bullish"}
+      ]
+    },
+    {
+      "theme": "Energy + Defense Hedge",
+      "buzz_score": 0.74,
+      "tickers": ["CVX", "LMT", "XLE"],
+      "creators": [
+        {"name": "Hedgeye", "clip": "Iran premium keeps crude supported", "sentiment": "bullish"},
+        {"name": "CNBC Closing Bell", "clip": "Pentagon replenishment orders", "sentiment": "bullish"},
+        {"name": "Nana说美股", "clip": "油价突破关口", "sentiment": "bullish"}
+      ]
+    },
+    {
+      "theme": "Consumer Resilience",
+      "buzz_score": 0.55,
+      "tickers": ["COST", "XLY"],
+      "creators": [
+        {"name": "Yahoo Finance", "clip": "Warehouse clubs gain wallet share", "sentiment": "neutral"},
+        {"name": "Graham Stephan", "clip": "Retail spending holding up", "sentiment": "neutral"},
+        {"name": "贝奇说股", "clip": "Costco同店销售", "sentiment": "neutral"}
+      ]
+    }
+  ],
+  "alerts": [
+    {
+      "type": "volatility",
+      "description": "Iran headlines boosted VIX overnight; watch for profit-taking in AI beta names.",
+      "severity": "medium"
+    }
+  ]
+}

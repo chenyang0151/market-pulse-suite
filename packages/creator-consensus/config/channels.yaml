@@ -1,0 +1,283 @@
+# Market Pulse watchlist of finance YouTube channels
+# Fields: name, handle_or_url, language, region, cadence, focus, notes
+channels:
+  - name: Bloomberg Markets and Finance
+    handle_or_url: https://www.youtube.com/@Markets
+    language: en
+    region: US
+    cadence: hourly
+    focus: Macro news desk
+    notes: Core macro + policy coverage
+  - name: CNBC Television
+    handle_or_url: https://www.youtube.com/@CNBCtelevision
+    language: en
+    region: US
+    cadence: hourly
+    focus: Live market commentary
+    notes: Halftime/Closing Bell clips for institutional sentiment
+  - name: Yahoo Finance
+    handle_or_url: https://www.youtube.com/@yahoofinance
+    language: en
+    region: US
+    cadence: hourly
+    focus: Interviews + earnings recaps
+    notes: Good for strategist commentary
+  - name: Wall Street Journal
+    handle_or_url: https://www.youtube.com/@WSJ
+    language: en
+    region: US
+    cadence: daily
+    focus: Business + market explainers
+    notes: Adds policy context
+  - name: ARK Invest
+    handle_or_url: https://www.youtube.com/@ARKInvest2015
+    language: en
+    region: US
+    cadence: weekly
+    focus: Innovation / growth stocks
+    notes: Cathie Wood macro take
+  - name: All-In Podcast
+    handle_or_url: https://www.youtube.com/@allin
+    language: en
+    region: US
+    cadence: weekly
+    focus: Tech macro + venture sentiment
+    notes: Already requested by Chen
+  - name: Joseph Carlson
+    handle_or_url: https://www.youtube.com/@JosephCarlsonShow
+    language: en
+    region: US
+    cadence: weekly
+    focus: Dividend growth + macro
+    notes: Already requested by Chen
+  - name: Meet Kevin
+    handle_or_url: https://www.youtube.com/@meetkevin
+    language: en
+    region: US
+    cadence: daily
+    focus: Real-time macro + trading
+    notes: Already requested by Chen
+  - name: Let’s Talk Money with Joseph Hogue
+    handle_or_url: https://www.youtube.com/@josephhogue
+    language: en
+    region: US
+    cadence: weekly
+    focus: Macro + sector breakdowns
+    notes: Includes slides/data
+  - name: Sven Carlin
+    handle_or_url: https://www.youtube.com/@Value-Investing
+    language: en
+    region: EU/US
+    cadence: weekly
+    focus: Value + risk modeling
+    notes: Strong downside analysis
+  - name: Market Rebellion (Jon & Pete Najarian)
+    handle_or_url: https://www.youtube.com/@MarketRebellion
+    language: en
+    region: US
+    cadence: daily
+    focus: Options flow + volatility
+    notes: Adds positioning color
+  - name: Hedgeye
+    handle_or_url: https://www.youtube.com/@hedgeye
+    language: en
+    region: US
+    cadence: daily
+    focus: Macro risk ranges
+    notes: Good pre-market briefings
+  - name: 美投讲美股
+    handle_or_url: https://www.youtube.com/@MeiTouJun
+    language: zh
+    region: CN/US
+    cadence: daily
+    focus: Macro + fundamentals
+    notes: Known as top Chinese US-market channel
+  - name: 美投侃新闻
+    handle_or_url: https://www.youtube.com/@MeiTouNews
+    language: zh
+    region: CN/US
+    cadence: daily
+    focus: News quick-take
+    notes: Companion to 美投讲美股
+  - name: 贝拉聊财金
+    handle_or_url: https://www.youtube.com/@BellaFinance
+    language: zh
+    region: CN/US
+    cadence: daily
+    focus: Tech/AI stock deep dives
+    notes: Includes valuation targets
+  - name: Nana说美股
+    handle_or_url: https://www.youtube.com/@NaNaShuoMeiGu
+    language: zh
+    region: CN/US
+    cadence: daily
+    focus: Daily market recap
+    notes: Sentiment read for Chinese community
+  - name: TradingKey 美股财经
+    handle_or_url: https://www.youtube.com/@TradingKey_ZH
+    language: zh
+    region: CN/US
+    cadence: weekly
+    focus: Earnings + AI trend tracking
+    notes: Structured data friendly
+  - name: 猴哥财经
+    handle_or_url: https://www.youtube.com/@MonkeyFinance
+    language: zh
+    region: CN/US
+    cadence: weekly
+    focus: Macro + strategy
+    notes: Includes Wall Street forecast digests
+  - name: 今日美股解读
+    handle_or_url: https://www.youtube.com/@USMarketToday
+    language: zh
+    region: CN/US
+    cadence: daily
+    focus: Technical analysis + levels
+    notes: Useful for support/resistance mentions
+  - name: 贝奇说股
+    handle_or_url: https://www.youtube.com/@BeckieAnalysis
+    language: zh
+    region: CN/US
+    cadence: daily
+    focus: Intraday / technical setups
+    notes: Good for trader sentiment
+  - name: Benzinga
+    handle_or_url: https://www.youtube.com/@Benzinga
+    language: en
+    region: US
+    cadence: daily
+    focus: Day-trader desk + premarket news
+    notes: Frequent live interviews with CEOs and traders
+  - name: The Money Guy Show
+    handle_or_url: https://www.youtube.com/@MoneyGuyShow
+    language: en
+    region: US
+    cadence: weekly
+    focus: Personal finance + asset allocation
+    notes: Good for retail strategy frameworks
+  - name: Graham Stephan
+    handle_or_url: https://www.youtube.com/@GrahamStephan
+    language: en
+    region: US
+    cadence: daily
+    focus: Macro news + consumer sentiment
+    notes: Influences retail momentum
+  - name: InvestAnswers
+    handle_or_url: https://www.youtube.com/@InvestAnswers
+    language: en
+    region: US
+    cadence: daily
+    focus: Crypto + AI cross-asset strategy
+    notes: Data-heavy models on BTC, NVDA, TSLA
+  - name: The Ramsey Show
+    handle_or_url: https://www.youtube.com/@TheRamseyShow
+    language: en
+    region: US
+    cadence: daily
+    focus: Personal finance + behavioral coaching
+    notes: Signals Main Street stress
+  - name: Minority Mindset
+    handle_or_url: https://www.youtube.com/@MinorityMindset
+    language: en
+    region: US
+    cadence: weekly
+    focus: Entrepreneurship + investing mindset
+    notes: Younger retail sentiment
+  - name: Seeking Alpha
+    handle_or_url: https://www.youtube.com/@SeekingAlpha
+    language: en
+    region: US
+    cadence: daily
+    focus: Equity research recaps
+    notes: Clips summarize contributor theses
+  - name: Morningstar
+    handle_or_url: https://www.youtube.com/@MorningstarInc
+    language: en
+    region: US
+    cadence: weekly
+    focus: Fundamental research + ratings
+    notes: Great for valuation context
+  - name: Zacks Investment News
+    handle_or_url: https://www.youtube.com/@ZacksInvestmentNews
+    language: en
+    region: US
+    cadence: daily
+    focus: Earnings previews + quant picks
+    notes: Aligns with Zacks Rank updates
+  - name: The Motley Fool
+    handle_or_url: https://www.youtube.com/@MotleyFool
+    language: en
+    region: US
+    cadence: daily
+    focus: Growth stock ideas + interviews
+    notes: Gauges long-only retail appetite
+  - name: "Investor's Business Daily"
+    handle_or_url: https://www.youtube.com/@IBDInvestors
+    language: en
+    region: US
+    cadence: daily
+    focus: CAN SLIM technicals + market pulse
+    notes: Tracks institutional accumulation/distribution
+  - name: Simply Wall St
+    handle_or_url: https://www.youtube.com/@SimplyWallSt
+    language: en
+    region: Global
+    cadence: weekly
+    focus: Data visualization + valuation walk-throughs
+    notes: Useful charts for report visuals
+  - name: TradingView
+    handle_or_url: https://www.youtube.com/@tradingview
+    language: en
+    region: Global
+    cadence: weekly
+    focus: Charting techniques + community setups
+    notes: Signals technical crowd positioning
+  - name: PitchBook
+    handle_or_url: https://www.youtube.com/@PitchBook
+    language: en
+    region: US
+    cadence: weekly
+    focus: Private markets + venture data
+    notes: Helpful for AI/VC capital flows
+  - name: 牛顿师兄
+    handle_or_url: https://www.youtube.com/@%E7%89%9B%E9%A1%BF%E5%B8%88%E5%85%84
+    language: zh
+    region: CN/US
+    cadence: weekly
+    focus: Macro + fundamental case studies
+    notes: Deep dives with slides and tools
+  - name: 美股投资网
+    handle_or_url: https://www.youtube.com/@TradesMax
+    language: zh
+    region: CN/US
+    cadence: weekly
+    focus: Fundamental walkthroughs
+    notes: Often shares DCF models
+  - name: 投资TALK君
+    handle_or_url: https://www.youtube.com/@yttalkjun
+    language: zh
+    region: CN/US
+    cadence: daily
+    focus: Macro narration + stock levels
+    notes: Long-form bilingual analysis
+  - name: 投机实验室
+    handle_or_url: https://www.youtube.com/@speculation
+    language: zh
+    region: CN/US
+    cadence: weekly
+    focus: Crypto + high-beta trading
+    notes: Good for risk-on sentiment
+  - name: 老汤美股财经
+    handle_or_url: https://www.youtube.com/@laotangmeigu
+    language: zh
+    region: CN/US
+    cadence: weekly
+    focus: US earnings recap + strategy
+    notes: Straightforward bullet takeaways
+  - name: 财经风云
+    handle_or_url: https://www.youtube.com/@ChineseFinance
+    language: zh
+    region: CN/US
+    cadence: weekly
+    focus: Talk-show interviews + policy
+    notes: Bilingual macro context

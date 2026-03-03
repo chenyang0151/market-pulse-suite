@@ -1,0 +1,18 @@
+Book equity: $98,000.00
+Cash: $17,167.71
+
+Target vs. Actual (top 5 weights):
+- CVX: actual 15.1% vs target 15.0% (drift +0.1%)
+- LMT: actual 14.9% vs target 15.0% (drift -0.1%)
+- NVDA: actual 12.1% vs target 12.0% (drift +0.1%)
+- MSFT: actual 9.9% vs target 10.0% (drift -0.1%)
+- GOOGL: actual 8.0% vs target 8.0% (drift -0.0%)
+
+Suggested orders:
+- SELL -0.69 CVX (~$-131) — Energy hedge vs. Middle East risk; dividend + buyback support
+- BUY 0.14 LMT (~$95) — Front-line beneficiary if Iran conflict escalates; order backlog strong
+- SELL -0.71 NVDA (~$-127) — AI infrastructure spine; still compounding data-center demand
+- BUY 0.23 MSFT (~$92) — Cloud + AI suite cash machine; stabilizes tech exposure
+- BUY 0.77 COST (~$777) — Membership model defends margins if inflation resurges
+- SELL -4.16 SCHD (~$-132) — High quality dividend ETF to ballast drawdowns
+- SELL -8.91 SOUN (~$-76) — AI speech beta play (per Meyka/YouTube chatter); capped risk
