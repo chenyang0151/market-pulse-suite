@@ -198,10 +198,29 @@ def format_bullet(item: Item) -> str:
     tickers = extract_tickers(item.text())
     ticker_str = f" {' '.join(tickers)}" if tickers else ""
     link = f" ({item.link})" if item.link else ""
-    return f"- **{item.title.strip()}**{ticker_str}{link}"
+    summary = f" — {item.summary.strip()}" if item.summary else ""
+    source = item.source or "source"
+    return f"- **{source}** · {item.title.strip()}{ticker_str}{summary}{link}"
 
 
-def aggregate_consensus(news_items: List[Item], yt_items: List[Item]) -> List[str]:
+def format_sector_block(entry: Dict[str, object]) -> str:
+    topic = entry.get("topic", "Unlabeled")
+    tickers = " ".join(entry.get("tickers", []))
+    news = entry.get("news", {})
+    creator = entry.get("creator", {})
+    lines = [f"### {topic} {tickers}",]
+    conclusion = f"新闻：{news.get('title', 'n/a')} | 创作者：{creator.get('title', 'n/a')}"
+    lines.append(f"- **结论**：{conclusion}")
+    if news.get("link"):
+        lines.append(f"- **News**：[{news.get('source', 'link')}]({news['link']})")
+    if creator.get("link"):
+        lines.append(f"- **Creator Clip**：[{creator.get('source', 'link')}]({creator['link']})")
+    if tickers:
+        lines.append(f"- **相关股票**：{tickers}")
+    return "\n".join(lines)
+
+
+def aggregate_consensus(news_items: List[Item], yt_items: List[Item]) -> List[Dict[str, object]]:
     news_topics = defaultdict(list)
     yt_topics = defaultdict(list)
     for item in news_items:
@@ -211,17 +230,31 @@ def aggregate_consensus(news_items: List[Item], yt_items: List[Item]) -> List[st
         for topic in match_topics(item.text()):
             yt_topics[topic].append(item)
 
-    bullets: List[str] = []
+    summaries: List[Dict[str, object]] = []
     for topic, news_hits in news_topics.items():
         if topic not in yt_topics:
             continue
         yt_hits = yt_topics[topic]
-        latest_news = news_hits[0]
-        latest_yt = yt_hits[0]
-        bullets.append(
-            f"- **{topic}** – News: {latest_news.title.strip()} | Creators: {latest_yt.title.strip()}"
+        latest_news = sorted(news_hits, key=lambda i: i.published_at or datetime.min, reverse=True)[0]
+        latest_yt = sorted(yt_hits, key=lambda i: i.published_at or datetime.min, reverse=True)[0]
+        tickers = sorted(set(extract_tickers(latest_news.text()) + extract_tickers(latest_yt.text())))
+        summaries.append(
+            {
+                "topic": topic,
+                "news": {
+                    "title": latest_news.title.strip(),
+                    "link": latest_news.link,
+                    "source": latest_news.source,
+                },
+                "creator": {
+                    "title": latest_yt.title.strip(),
+                    "link": latest_yt.link,
+                    "source": latest_yt.source,
+                },
+                "tickers": tickers,
+            }
         )
-    return bullets[:5]
+    return summaries[:5]
 
 
 def build_chinese_section(sections: Dict[str, List[str]], translator: TranslatorWrapper, top_n: int) -> List[str]:
@@ -237,12 +270,13 @@ def render_report(sections: Dict[str, List[str]], report_date: datetime) -> str:
     zh_section = build_chinese_section(sections, translator, top_n=5)
 
     parts = [f"# Market Pulse — {report_date.strftime('%Y-%m-%d')}\n"]
-    if sections.get("macro"):
-        parts.append("## Overnight Macro\n" + "\n".join(sections["macro"]))
-    if sections.get("creators"):
-        parts.append("\n## Creator Pulse\n" + "\n".join(sections["creators"]))
     if sections.get("consensus"):
-        parts.append("\n## Consensus Watch\n" + "\n".join(sections["consensus"]))
+        blocks = "\n\n".join(format_sector_block(entry) for entry in sections["consensus"])
+        parts.append("## 板块结论 | Sector Conclusions\n" + blocks)
+    if sections.get("macro"):
+        parts.append("\n## Macro Wire\n" + "\n".join(sections["macro"]))
+    if sections.get("creators"):
+        parts.append("\n## Creator Pulse 热点\n" + "\n".join(sections["creators"]))
     if zh_section:
         parts.append("\n## 中文热点摘要\n" + "\n".join(zh_section))
     if sections.get("trades"):

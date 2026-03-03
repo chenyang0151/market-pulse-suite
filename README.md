@@ -19,7 +19,7 @@
 | `packages/market-pulse` | Scraper + brain pair that outputs the flagship bilingual brief. | [README](packages/market-pulse/README.md) |
 | `packages/creator-consensus` | Turns creator signals into a bilingual consensus snapshot. | [README](packages/creator-consensus/README.md) |
 | `packages/sim-portfolio-100k` | Maintains a $100K macro-aware simulation book + rebalance helper. | [README](packages/sim-portfolio-100k/README.md) |
-| `docs/` | English + Chinese architecture notes. | [overview.en](docs/overview.en.md) / [overview.zh](docs/overview.zh.md) |
+| `docs/` | Architecture notes + weekly template. | [overview.en](docs/overview.en.md) / [overview.zh](docs/overview.zh.md) / [weekly template](docs/weekly-template.md) |
 | `samples/` | Real output files you can compare against. | [README](samples/README.md) |
 | `daily-updates/` | Drop zone for daily reports + portfolio snapshots. | [README](daily-updates/README.md) |
 
